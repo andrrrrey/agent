@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+secrets/
+data/
+logs/
+backups/
+.DS_Store
+AGENTS.override.md
+
