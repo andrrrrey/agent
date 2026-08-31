@@ -1,0 +1,32 @@
+# Скопируйте в закрытую рабочую папку клиента и заполните.
+# Секреты, токены и пароли здесь запрещены.
+
+doctor:
+  timezone: Europe/Moscow
+  check_interval_minutes: 5
+  confirmation_interval_seconds: 60
+  restart_cooldown_seconds: 120
+  max_restarts_per_window: 2
+  restart_window_minutes: 30
+  incident_owner: "{{ИМЯ_И_КОНТАКТ}}"
+  state_directory: "{{АБСОЛЮТНЫЙ_ПУТЬ}}/doctor-state"
+
+hermes:
+  # separate — отдельный gateway у каждого профиля
+  # multiplex — все профили обслуживает основной gateway
+  gateway_mode: separate
+  service_scope: user
+
+agents:
+  - name: "{{НАЗВАНИЕ_АГЕНТА}}"
+    profile: "{{HERMES_PROFILE}}"
+    owner: "{{ВЛАДЕЛЕЦ_ПРОЦЕССА}}"
+    criticality: high
+    expected_channels: [telegram]
+    auto_restart: true
+    # Команда задаётся администратором после ручной проверки на этом VPS.
+    status_command: "hermes -p {{HERMES_PROFILE}} gateway status --deep"
+    doctor_command: "hermes -p {{HERMES_PROFILE}} doctor"
+    restart_command: "hermes -p {{HERMES_PROFILE}} gateway restart"
+    functional_probe: "{{ОПИСАНИЕ_БЕЗОПАСНОЙ_ПРОБЫ}}"
+
