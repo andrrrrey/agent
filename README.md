@@ -12,6 +12,7 @@
 - карта усиления и интеграций (`docs/POWER-UP-ROADMAP.md`);
 - готовые пакеты решений для продажи (`docs/SOLUTION-PACKAGES.md`);
 - методика проверки качества и окупаемости (`docs/EVALUATION.md`);
+- пошаговая инструкция для начинающих на macOS и Windows (`docs/BEGINNER-DEPLOYMENT.md`);
 - подробный сценарий установки (`docs/DEPLOYMENT.md`);
 - анкета и порядок запуска у клиента (`docs/CLIENT-ONBOARDING.md`);
 - правила безопасности и эксплуатации (`docs/SECURITY.md`);
@@ -39,7 +40,7 @@ Hermes Gateway на VPS клиента
 1. Создайте приватный репозиторий из этой папки.
 2. Заполните плейсхолдеры в `AGENTS.md` и `templates/SOUL.md`.
 3. Пройдите анкету из `docs/CLIENT-ONBOARDING.md` вместе с клиентом.
-4. Выполните `docs/DEPLOYMENT.md` сначала на тестовом окружении.
+4. Если устанавливаете впервые, выполняйте `docs/BEGINNER-DEPLOYMENT.md`; техническая краткая версия находится в `docs/DEPLOYMENT.md`.
 5. Выберите и установите навыки по `docs/SKILLS.md`.
 6. Заполните бизнес-память в `knowledge/`.
 7. Подключайте системы по `docs/INTEGRATIONS.md`.
